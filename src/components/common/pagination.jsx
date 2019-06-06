@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import _ from "lodash";
 
-const pagination = props => {
+const Pagination = props => {
   const { moviesCount, pageSize, onPageChange, currentPage } = props;
   const pagesCount = Math.ceil(moviesCount / pageSize);
   if (pagesCount === 1) return null;
@@ -26,11 +26,11 @@ const pagination = props => {
   );
 };
 
-pagination.propTypes = {
+Pagination.propTypes = {
   moviesCount: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,
   onPageChange: PropTypes.func.isRequired,
   currentPage: PropTypes.number.isRequired
 };
 
-export default pagination;
+export default Pagination;
