@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import _ from "lodash";
 
 const Pagination = props => {
-  const { moviesCount, pageSize, onPageChange, currentPage } = props;
-  const pagesCount = Math.ceil(moviesCount / pageSize);
+  const { itemsCount, pageSize, onPageChange, currentPage } = props;
+  const pagesCount = Math.ceil(itemsCount / pageSize);
   if (pagesCount === 1) return null;
   const pages = _.range(1, pagesCount + 1);
 
@@ -27,7 +27,7 @@ const Pagination = props => {
 };
 
 Pagination.propTypes = {
-  moviesCount: PropTypes.number.isRequired,
+  itemsCount: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,
   onPageChange: PropTypes.func.isRequired,
   currentPage: PropTypes.number.isRequired

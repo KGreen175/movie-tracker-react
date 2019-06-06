@@ -78,7 +78,7 @@ class Movies extends Component {
             onDelete={this.handleDelete}
           />
           <Pagination
-            moviesCount={filtered.length}
+            itemsCount={filtered.length}
             pageSize={pageSize}
             onPageChange={this.handlePageChange}
             currentPage={currentPage}
